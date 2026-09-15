@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>TaskFlow - To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">DAILY PRODUCTIVITY</p>
+                <h1>TaskFlow</h1>
+                <p class="subtitle">
+                    Organize your day, one task at a time.
+                </p>
+            </div>
+
+        
+        </header>
+
+
+        <!-- Add Task -->
+        <form id="taskForm" class="add-task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                maxlength="200"
+                autocomplete="off"
+            >
+
+            <button type="submit" class="add-btn">
+                <span>+</span>
+                Add Task
+            </button>
+
+        </form>
+
+
+        <!-- Lists -->
+        <div class="task-sections">
+
+            <!-- Pending Tasks -->
+            <section class="task-section">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Pending Tasks</h2>
+                        <p>Things you still need to do</p>
+                    </div>
+
+                    <span id="pendingCount" class="count pending-count">
+                        0 pending
+                    </span>
+                </div>
+
+                <div id="pendingList" class="task-list">
+                    <!-- Pending tasks will be inserted here -->
+                </div>
+
+                <div id="pendingEmpty" class="empty-state">
+                    <div class="empty-icon">✓</div>
+                    <h3>All caught up!</h3>
+                    <p>You don't have any pending tasks.</p>
+                </div>
+
+            </section>
+
+
+            <!-- Completed Tasks -->
+            <section class="task-section completed-section">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Completed Tasks</h2>
+                        <p>Tasks you've already finished</p>
+                    </div>
+
+                    <span id="completedCount" class="count completed-count">
+                        0 completed
+                    </span>
+                </div>
+
+                <div id="completedList" class="task-list">
+                    <!-- Completed tasks will be inserted here -->
+                </div>
+
+                <div id="completedEmpty" class="empty-state">
+                    <div class="empty-icon muted">○</div>
+                    <h3>No completed tasks yet</h3>
+                    <p>Complete a task and it will appear here.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <footer>
+            <p>Tasks are automatically saved in your browser.</p>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>
