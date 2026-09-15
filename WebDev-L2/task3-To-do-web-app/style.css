@@ -1,0 +1,675 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+
+    --success: #10b981;
+    --success-light: #ecfdf5;
+
+    --danger: #ef4444;
+    --danger-light: #fef2f2;
+
+    --warning: #f59e0b;
+
+    --text: #1f2937;
+    --muted: #6b7280;
+    --light-text: #9ca3af;
+
+    --background: #f4f6fb;
+    --white: #ffffff;
+
+    --border: #e5e7eb;
+
+    --shadow: 0 20px 50px rgba(31, 41, 55, 0.08);
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e9e7ff 0,
+            transparent 35%
+        ),
+        var(--background);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   MAIN APP
+========================= */
+
+.app {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 28px;
+
+    padding: 40px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.app-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+.subtitle {
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+.header-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        #8b5cf6
+    );
+
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+
+/* =========================
+   ADD TASK FORM
+========================= */
+
+.add-task-form {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+}
+
+#taskInput {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 54px;
+
+    padding: 0 18px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: var(--text);
+
+    background: #fafafa;
+
+    transition: 0.2s;
+}
+
+#taskInput:focus {
+    border-color: var(--primary);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+#taskInput::placeholder {
+    color: var(--light-text);
+}
+
+.add-btn {
+    height: 54px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: 0.2s;
+}
+
+.add-btn span {
+    font-size: 22px;
+}
+
+.add-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   TASK SECTIONS
+========================= */
+
+.task-sections {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+}
+
+.task-section {
+    background: #fafafa;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 22px;
+
+    min-height: 300px;
+}
+
+.completed-section {
+    background: #fbfdfc;
+}
+
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    font-size: 19px;
+
+    letter-spacing: -0.3px;
+}
+
+.section-header p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+.count {
+    white-space: nowrap;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.pending-count {
+    color: var(--primary);
+
+    background: #eef2ff;
+}
+
+.completed-count {
+    color: #059669;
+
+    background: var(--success-light);
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+.task-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+    animation: taskAppear 0.25s ease;
+}
+
+@keyframes taskAppear {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   TASK CHECK
+========================= */
+
+.complete-btn {
+    flex-shrink: 0;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    border: 2px solid #cbd5e1;
+
+    background: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.complete-btn:hover {
+    border-color: var(--success);
+
+    background: var(--success-light);
+}
+
+.task-card.completed .complete-btn {
+    border-color: var(--success);
+
+    background: var(--success);
+}
+
+
+/* =========================
+   TASK CONTENT
+========================= */
+
+.task-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.task-text {
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+.task-card.completed .task-text {
+    color: var(--muted);
+
+    text-decoration: line-through;
+}
+
+.task-time {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--light-text);
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   EDIT INPUT
+========================= */
+
+.edit-input {
+    width: 100%;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    padding: 8px 10px;
+
+    font-size: 14px;
+
+    color: var(--text);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================
+   TASK ACTIONS
+========================= */
+
+.task-actions {
+    display: flex;
+
+    gap: 6px;
+
+    flex-shrink: 0;
+}
+
+.action-btn {
+    border: none;
+
+    background: transparent;
+
+    padding: 7px 9px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.edit-btn {
+    color: var(--primary);
+}
+
+.edit-btn:hover {
+    background: #eef2ff;
+}
+
+.delete-btn {
+    color: var(--danger);
+}
+
+.delete-btn:hover {
+    background: var(--danger-light);
+}
+
+.save-btn {
+    color: var(--success);
+}
+
+.save-btn:hover {
+    background: var(--success-light);
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    min-height: 210px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: var(--muted);
+}
+
+.empty-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--success-light);
+
+    color: var(--success);
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.empty-icon.muted {
+    background: #f3f4f6;
+
+    color: #9ca3af;
+}
+
+.empty-state h3 {
+    color: var(--text);
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.empty-state p {
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 28px;
+
+    color: var(--light-text);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .app {
+        padding: 24px 18px;
+
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .task-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .add-task-form {
+        flex-direction: column;
+    }
+
+    .add-btn {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .app-header {
+        align-items: flex-start;
+    }
+
+    .header-icon {
+        width: 46px;
+        height: 46px;
+
+        border-radius: 14px;
+
+        font-size: 21px;
+    }
+
+    .task-card {
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        padding: 5px;
+    }
+
+    .section-header {
+        flex-direction: column;
+    }
+}
