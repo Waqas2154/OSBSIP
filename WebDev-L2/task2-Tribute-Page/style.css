@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+    --dark: #06251f;
+    --dark-2: #092c26;
+    --green: #08775d;
+    --light-green: #e7f0eb;
+    --cream: #f7f7f1;
+    --text: #293535;
+    --muted: #566262;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 50px;
+    background: #061f1b;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-inner {
+    max-width: 920px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.brand {
+    border-left: 4px solid #68d7ba;
+    padding-left: 12px;
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    font-size: 12px;
+}
+
+.nav-links a {
+    padding: 15px 0 9px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-bottom-color: #6bd7bc;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: white;
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    min-height: 297px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(3, 33, 27, .97) 0%, rgba(4, 37, 31, .92) 42%, rgba(4, 37, 31, .20) 76%, rgba(4, 37, 31, .05) 100%),
+        url("imrankhan.jpg") center right / cover no-repeat;
+}
+
+.hero-content {
+    width: 920px;
+    margin: 0 auto;
+    padding: 32px 20px 35px;
+    color: white;
+}
+
+.eyebrow,
+.section-label {
+    letter-spacing: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #58b89e;
+}
+
+.hero h1 {
+    margin-top: 2px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 58px;
+    line-height: 1.12;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.green-line {
+    display: block;
+    width: 48px;
+    height: 5px;
+    background: #6de0be;
+    margin: 19px 0 22px;
+}
+
+.hero-text {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* GENERAL */
+.section {
+    max-width: 920px;
+    margin: auto;
+}
+
+h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: #0a3430;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.about {
+    min-height: 455px;
+    padding: 23px 20px 25px;
+    display: grid;
+    grid-template-columns: 1.45fr .9fr;
+    gap: 35px;
+    background: var(--cream);
+}
+
+.about-left h2 {
+    margin: 2px 0 10px;
+}
+
+.about-left > p:not(.section-label) {
+    font-size: 11.5px;
+    line-height: 1.43;
+    margin-bottom: 12px;
+    color: #4a5555;
+}
+
+.about-right {
+    padding-top: 2px;
+}
+
+.quote-paint {
+    min-height: 185px;
+    background: #26755f;
+    color: white;
+    position: relative;
+    padding: 36px 35px 25px;
+    clip-path: polygon(4% 7%, 92% 0, 98% 9%, 95% 93%, 65% 100%, 3% 91%, 0 22%);
+    transform: rotate(-1deg);
+}
+
+.quote-mark {
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    font-family: Georgia, serif;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.quote-paint p {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.35;
+    margin-left: 15px;
+}
+
+.quote-author {
+    display: block;
+    margin: 12px 0 0 15px;
+    font-size: 12px;
+}
+
+.quote-end {
+    left: auto;
+    right: 23px;
+    top: auto;
+    bottom: -2px;
+}
+
+.old-photo {
+    width: 94%;
+    height: 188px;
+    margin: -1px auto 0;
+    overflow: hidden;
+    clip-path: polygon(3% 4%, 96% 0, 100% 88%, 90% 100%, 8% 95%, 0 15%);
+    filter: grayscale(100%);
+    
+}
+
+.old-photo img {
+    width: 100%;
+    height: 153%;
+    object-fit: cover;
+    
+}
+
+/* ACHIEVEMENTS */
+.achievements {
+    max-width: none;
+    padding: 24px max(20px, calc((100% - 920px) / 2)) 20px;
+    background: #e3eee8;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 38px;
+}
+
+.achievement-main h2 {
+    margin: 3px 0 8px;
+}
+
+.intro {
+    font-size: 12px;
+    margin-bottom: 19px;
+    color: #536060;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 17px;
+}
+
+.achievement {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 10px;
+    align-items: start;
+    min-height: 66px;
+}
+
+.achievement:nth-child(odd) {
+    border-right: 1px solid #c4d4cc;
+    padding-right: 20px;
+}
+
+.icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #09634f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.achievement h3 {
+    font-size: 12px;
+    color: #122f2b;
+    margin: 2px 0 2px;
+}
+
+.achievement p {
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #586363;
+}
+
+/* TIMELINE */
+.timeline {
+    border-left: 1px solid #b8cbc2;
+    padding-left: 25px;
+}
+
+.timeline h2 {
+    margin: -1px 0 11px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 12px 21px;
+    min-height: 49px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -29px;
+    top: 8px;
+    width: 1px;
+    height: calc(100% + 1px);
+    background: #2d806a;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.dot {
+    position: absolute;
+    left: -31px;
+    top: 5px;
+    width: 11px;
+    height: 11px;
+    background: #0d7159;
+    border-radius: 50%;
+}
+
+.timeline strong {
+    color: #19493f;
+    font-size: 13px;
+}
+
+.timeline p {
+    font-size: 10.5px;
+    color: #5b6865;
+    line-height: 1.35;
+    margin-top: 1px;
+}
+
+/* QUOTE BANNER */
+.quote-banner {
+    height: 130px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        linear-gradient(rgba(14, 36, 32, .10), rgba(14, 36, 32, .10)),
+        url("imrankhan2.jpg") center 54% / cover no-repeat;
+}
+
+.quote-overlay {
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,.45);
+}
+
+.quote-overlay p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.quote-overlay span {
+    display: block;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+/* GALLERY ANCHOR */
+.gallery-anchor {
+    height: 0;
+}
+
+/* FOOTER */
+.footer {
+    background: #061f1b;
+    color: white;
+    padding: 19px 20px 15px;
+}
+
+.footer-top {
+    max-width: 920px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    align-items: center;
+}
+
+.footer-brand h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+}
+
+.footer-brand p {
+    font-size: 7px;
+    letter-spacing: 1.6px;
+    color: #a8c4ba;
+    margin-top: -2px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+    font-size: 10px;
+}
+
+.footer-links a:hover {
+    color: #69d5b8;
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    font-size: 13px;
+}
+
+.footer-bottom {
+    max-width: 300px;
+    margin: 18px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.footer-bottom span {
+    height: 1px;
+    background: #39554f;
+    flex: 1;
+}
+
+.footer-bottom p {
+    white-space: nowrap;
+    font-family: Georgia, serif;
+    font-size: 9px;
+    color: #c3d2cd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 760px) {
+    .navbar {
+        height: 58px;
+    }
+
+    .nav-inner {
+        padding: 0 18px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 58px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: #061f1b;
+        padding: 8px 20px 15px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        min-height: 430px;
+        background:
+            linear-gradient(90deg, rgba(3, 33, 27, .93), rgba(3, 33, 27, .40)),
+            url("imrankhan.jpg") center / cover no-repeat;
+    }
+
+    .hero-content {
+        padding: 35px 25px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+    }
+
+    .about-right {
+        margin-top: 5px;
+    }
+
+    .achievements {
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement:nth-child(odd) {
+        border-right: 0;
+        padding-right: 0;
+    }
+
+    .timeline {
+        margin-top: 10px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .quote-paint p {
+        font-size: 18px;
+    }
+
+    .quote-overlay p {
+        font-size: 16px;
+    }
+}
