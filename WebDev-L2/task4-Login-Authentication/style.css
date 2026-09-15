@@ -1,0 +1,594 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+
+    --success: #10b981;
+    --success-light: #ecfdf5;
+
+    --danger: #ef4444;
+    --danger-light: #fef2f2;
+
+    --text: #1f2937;
+    --muted: #6b7280;
+    --light: #9ca3af;
+
+    --background: #f5f7fb;
+
+    --white: #ffffff;
+
+    --border: #e5e7eb;
+
+    --shadow:
+        0 20px 60px rgba(31, 41, 55, 0.10);
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e9e7ff,
+            transparent 35%
+        ),
+        var(--background);
+
+    color: var(--text);
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   AUTH PAGE
+========================================= */
+
+.auth-container {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px 20px;
+}
+
+
+.auth-card {
+    width: 100%;
+
+    max-width: 440px;
+
+    background: var(--white);
+
+    border-radius: 24px;
+
+    padding: 38px;
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.brand-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #8b5cf6
+        );
+
+    color: white;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 25px rgba(99, 102, 241, 0.28);
+}
+
+
+.brand h1 {
+    font-size: 28px;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 8px;
+}
+
+
+.brand p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+
+    color: #374151;
+}
+
+
+.form-group input {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1.5px solid var(--border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #fafafa;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus {
+    border-color: var(--primary);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.09);
+}
+
+
+.form-group input::placeholder {
+    color: var(--light);
+}
+
+
+.password-hint {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--light);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+    display: none;
+
+    padding: 11px 13px;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+.message.error {
+    display: block;
+
+    background: var(--danger-light);
+
+    border: 1px solid #fecaca;
+
+    color: #b91c1c;
+}
+
+
+.message.success {
+    display: block;
+
+    background: var(--success-light);
+
+    border: 1px solid #a7f3d0;
+
+    color: #047857;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.primary-btn {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+}
+
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   AUTH FOOTER
+========================================= */
+
+.auth-footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 13px;
+
+    color: var(--muted);
+}
+
+
+.auth-footer a {
+    color: var(--primary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-container {
+    min-height: 100vh;
+}
+
+
+.dashboard-header {
+    height: 72px;
+
+    padding: 0 6%;
+
+    background: white;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.dashboard-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+
+.brand-icon.small {
+    width: 38px;
+    height: 38px;
+
+    margin: 0;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+}
+
+
+.logout-btn {
+    border: 1px solid #fecaca;
+
+    background: var(--danger-light);
+
+    color: var(--danger);
+
+    padding: 9px 16px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.logout-btn:hover {
+    background: #fee2e2;
+}
+
+
+/* =========================================
+   DASHBOARD CONTENT
+========================================= */
+
+.dashboard-content {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 70px 20px;
+}
+
+
+.welcome-card {
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid var(--border);
+}
+
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: var(--success-light);
+
+    color: var(--success);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+.dashboard-label {
+    color: var(--success);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.welcome-card h1 {
+    font-size: 35px;
+
+    margin-bottom: 12px;
+
+    letter-spacing: -1px;
+}
+
+
+.welcome-card h1 span {
+    color: var(--primary);
+}
+
+
+.welcome-card > p:not(.dashboard-label) {
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    max-width: 580px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   USER INFO
+========================================= */
+
+.user-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+
+.info-item {
+    text-align: left;
+
+    padding: 17px;
+
+    background: #f9fafb;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+}
+
+
+.info-item span {
+    display: block;
+
+    color: var(--light);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-bottom: 6px;
+}
+
+
+.info-item strong {
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .auth-card {
+        padding: 28px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .dashboard-header {
+        padding: 0 20px;
+    }
+
+
+    .dashboard-content {
+        padding: 35px 15px;
+    }
+
+
+    .welcome-card {
+        padding: 30px 20px;
+    }
+
+
+    .welcome-card h1 {
+        font-size: 28px;
+    }
+
+
+    .user-info {
+        grid-template-columns: 1fr;
+    }
+}
